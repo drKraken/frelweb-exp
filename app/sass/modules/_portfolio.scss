@@ -1,0 +1,53 @@
+// styling of portfolio
+.portfolio {
+    @include container(90%);
+    .portfolio-item {
+        @include span(12 of 12 inside);
+        position: relative;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+        }
+        .dropmen {
+            position: absolute;
+            bottom: -100%;
+            z-index: 1000;
+            width: 100%;
+            text-align: center;
+            height: 100%;
+            background: rgba(0, 0, 0, .8);
+            padding: 25% 15px;
+            @include box-sizing(border-box);
+            @include transition(bottom .4s);
+            h4 {
+                color: $main;
+                z-index: 2000;
+            }
+            p {
+                color: $main;
+                font-size: 16px;
+            }
+        }
+        &:hover {
+            .dropmen {
+                bottom: 0;
+            }
+        }
+    }
+    @include breakpoint($banner) {
+        .portfolio-item {
+            @include span(6 of 12 inside);
+            margin-bottom: 15px;
+            img {
+                max-width: 100%;
+            }
+            .dropmen {
+
+                p {
+                    font-size: 20px;
+                }
+            }
+
+        }
+    }
+}

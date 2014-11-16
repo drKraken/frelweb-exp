@@ -1,0 +1,31 @@
+//promo styling
+.promo {
+    background: $promo;
+    text-align: center;
+    padding-top: 50px;
+    @include box-sizing(border-box);
+    h1 {
+        margin-top: 40px;
+    }
+    img {
+        width: 100%;
+    }
+    p {
+        color: $main;
+    }
+    .main-btn {
+        margin: 30px 0;
+    }
+    @include breakpoint($medium) {
+        h1 {
+            font-size: 40px;
+            margin-top: 120px;
+        }
+        p {
+            font-size: 24px;
+            font-weight: 100;
+        }
+
+
+    }
+}

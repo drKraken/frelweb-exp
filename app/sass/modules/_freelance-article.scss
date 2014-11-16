@@ -1,0 +1,79 @@
+//styling for free section
+.freelance-article {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    marging: 0;
+    text-align: center;
+    img {
+        max-width: 100%;
+    }
+    h1 {
+        margin-top: -120px;
+        font-size: 27px;
+        font-weight: bold;
+        padding: 0 20px;
+        margin-bottom: 60px;
+    }
+    .sec-btn {
+        margin-top: 30px;
+    }
+    .freelance-article-text-block {
+        @include container(90%);
+        h2 {
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 16px;
+            a {
+                color: $promo;
+            }
+        }
+        ul.our-benefits {
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+    }
+    @include breakpoint($pre-medium) {
+        h1 {
+            margin-bottom: 100px;
+            font-size: 33px;
+            @include container(75%);
+        }
+    }
+    @include breakpoint($large) {
+        h1 {
+            margin-bottom: 120px;
+            font-size: 40px;
+            @include container(70%);
+            margin-top: -140px;
+        }
+        text-align: center;
+    }
+}
+.banner {
+    width: 100%;
+    margin: 20px 0;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    h1 {
+        margin-top: -120px;
+        @include container(60%);
+    }
+    @include breakpoint($banner) {
+        h1 {
+            margin-top: -150px;
+            margin-bottom: 100px;
+        }
+    }
+    @include breakpoint($large) {
+        h1 {
+            font-size: 40px;
+            margin-top: -150px;
+            margin-bottom: 130px;
+        }
+    }
+}
