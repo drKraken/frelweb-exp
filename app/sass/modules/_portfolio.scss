@@ -12,11 +12,11 @@
             position: absolute;
             bottom: -100%;
             z-index: 1000;
-            width: 100%;
+            max-width: 100%;
             text-align: center;
             height: 100%;
             background: rgba(0, 0, 0, .8);
-            padding: 25% 15px;
+            padding: 100px 15px;
             @include box-sizing(border-box);
             @include transition(bottom .4s);
             h4 {
@@ -25,7 +25,7 @@
             }
             p {
                 color: $main;
-                font-size: 16px;
+                
             }
         }
         &:hover {
@@ -36,16 +36,10 @@
     }
     @include breakpoint($banner) {
         .portfolio-item {
-            @include span(6 of 12 inside);
+            @include span(4 of 12 inside);
             margin-bottom: 15px;
             img {
                 max-width: 100%;
-            }
-            .dropmen {
-
-                p {
-                    font-size: 20px;
-                }
             }
 
         }

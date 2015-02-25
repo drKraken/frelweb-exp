@@ -1,12 +1,6 @@
-//Gulpfile.js created by Oleh Kuchuk under MIT licence
-
-/*
-    License: MIT 
-    Author: Kuchuk Oleh
-*/
+// specific gulp file
 
 var gulp = require('gulp');
-var compass = require('gulp-compass');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
 var prefix = require('gulp-autoprefixer');
@@ -16,8 +10,7 @@ var htmlmin = require('gulp-minify-html');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var stylish = require('jshint-stylish');
-// var concat = require('gulp-concat');
-// var gulpif = require('gulp-if');
+// var compass = require('gulp-compass');
 
 
 // Set variables
@@ -26,7 +19,7 @@ var env,
     outputDir,
     sassStyle;
 
-env = 'product';
+env = 'development';
 
 if (env === 'development') {
     outputDir = 'app/';
@@ -41,6 +34,7 @@ if (env === 'development') {
 // Compile compass and sass
 
 // If use compass use this task to compile Sass/Compass
+// !! You must uncomment variable line 13 compass
 
 // gulp.task('compass', function() {
 //     return gulp.src('app/sass/*.scss')
@@ -60,7 +54,7 @@ gulp.task('sass', function() {
     gulp.src('app/sass/**/*.scss')
         .pipe(sass({
             style: 'expanded',
-            require: ['susy', 'breakpoint', 'bourbon']
+            require: ['susy', 'breakpoint']
 
         }))
         .pipe(prefix('last 2 version'))
@@ -124,6 +118,7 @@ gulp.task('watch', function() {
 
 });
 
+// specific task such as default and build task
 gulp.task('build', ['sass', 'js', 'htmlmin', 'cssmin', 'uglify', 'move']);
 
 gulp.task('default', ['sass', 'js', 'watch', 'browser']);

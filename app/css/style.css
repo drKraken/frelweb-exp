@@ -370,11 +370,11 @@ header .active {
   position: absolute;
   bottom: -100%;
   z-index: 1000;
-  width: 100%;
+  max-width: 100%;
   text-align: center;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  padding: 25% 15px;
+  padding: 100px 15px;
   box-sizing: border-box;
   -webkit-transition: bottom 0.4s;
   transition: bottom 0.4s;
@@ -385,7 +385,6 @@ header .active {
 }
 .portfolio .portfolio-item .dropmen p {
   color: #fff;
-  font-size: 16px;
 }
 .portfolio .portfolio-item:hover .dropmen {
   bottom: 0;
@@ -393,7 +392,7 @@ header .active {
 @media (min-width: 43em) {
   .portfolio .portfolio-item {
     box-sizing: border-box;
-    width: 50%;
+    width: 33.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%;
@@ -401,8 +400,5 @@ header .active {
   }
   .portfolio .portfolio-item img {
     max-width: 100%;
-  }
-  .portfolio .portfolio-item .dropmen p {
-    font-size: 20px;
   }
 }
