@@ -10,6 +10,9 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^1.6.0",
+    "dalek": "0.0.0",
+    "dalek-browser-chrome": "0.0.11",
+    "dalekjs": "0.0.9",
     "gulp": "^3.8.9",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-compass": "^2.0.1",
